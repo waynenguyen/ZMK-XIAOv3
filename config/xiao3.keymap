@@ -23,7 +23,7 @@
 &kp GRAVE  &kp Z   &kp X             &kp C              &kp V          &kp B           &kp N            &kp M    &kp COMMA      &kp DOT   &kp DOWN      &kp RIGHT
                    &kp LEFT_BRACKET  &kp RIGHT_BRACKET                                                           &kp SLASH      &kp LEFT
                                      &kp SPACE          &kp BACKSPACE  &kp LEFT_WIN                              &kp SEMICOLON
-                                     &mt LCTRL F10      &mt LALT F11   &lt 1 DEL       &kp LOCKING_NUM  &kp RET  &kp SQT
+                                     &mt LCTRL F10      &mt LALT F11   &lt 1 DEL       &kp PAUSE_BREAK  &kp RET  &kp SQT
             >;
         };
 

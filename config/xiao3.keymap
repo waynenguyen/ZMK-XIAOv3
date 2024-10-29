@@ -17,25 +17,25 @@
 
         default_layer {
             bindings = <
-&kp ESC    &kp N1  &kp N2            &kp N3             &kp N4         &kp N5          &kp N6        &kp N7    &kp N8     &kp N9    &kp N0        &kp MINUS
-&kp TAB    &kp Q   &kp W             &kp E              &kp R          &kp T           &kp Y         &kp U     &kp I      &kp O     &kp P         &kp BACKSLASH
-&kp LSHFT  &kp A   &kp S             &kp D              &kp F          &kp G           &kp H         &kp J     &kp K      &kp L     &kp UP_ARROW  &kp EQUAL
-&kp SLASH  &kp Z   &kp X             &kp C              &kp V          &kp B           &kp N         &kp M     &kp COMMA  &kp DOT   &kp DOWN      &kp RIGHT
-                   &kp LEFT_BRACKET  &kp RIGHT_BRACKET                                                         &mkp LCLK  &kp LEFT
-                                     &kp SPACE          &kp BACKSPACE  &kp LEFT_WIN                            &kp ENTER
-                                     &mt LCTRL F10      &mt LALT F11   &lt 1 DEL       &kp CAPSLOCK  &kp SEMI  &kp SQT
+&kp ESC    &kp N1  &kp N2            &kp N3             &kp N4         &kp N5          &kp N6          &kp N7    &kp N8     &kp N9    &kp N0        &kp MINUS
+&kp TAB    &kp Q   &kp W             &kp E              &kp R          &kp T           &kp Y           &kp U     &kp I      &kp O     &kp P         &kp BACKSLASH
+&kp LSHFT  &kp A   &kp S             &kp D              &kp F          &kp G           &kp H           &kp J     &kp K      &kp L     &kp UP_ARROW  &kp EQUAL
+&kp SLASH  &kp Z   &kp X             &kp C              &kp V          &kp B           &kp N           &kp M     &kp COMMA  &kp DOT   &kp DOWN      &kp RIGHT
+                   &kp LEFT_BRACKET  &kp RIGHT_BRACKET                                                           &mkp LCLK  &kp LEFT
+                                     &kp SPACE          &kp BACKSPACE  &kp LEFT_WIN                              &kp ENTER
+                                     &mt LCTRL F10      &mt LALT F11   &lt 1 DEL       &mwh SCROLL_UP  &kp SEMI  &kp SQT
             >;
         };
 
         layer_1 {
             bindings = <
-&kp GRAVE         &kp F1  &kp F2  &kp F3    &kp F4  &kp F5    &kp F6     &kp F7            &kp F8     &kp F9  &kp F12  &kp F11
-&trans            &trans  &trans  &trans    &trans  &trans    &trans     &mkp RCLK         &trans     &trans  &trans   &trans
-&kp LEFT_SHIFT    &trans  &trans  &trans    &trans  &trans    &mkp LCLK  &mwh SCROLL_UP    &trans     &trans  &trans   &trans
-&kp LEFT_CONTROL  &trans  &trans  &trans    &trans  &trans    &trans     &msc SCROLL_DOWN  &trans     &trans  &trans   &bt BT_CLR_ALL
-                          &trans  &trans                                                   &mkp LCLK  &trans
-                                  &kp HOME  &trans  &trans                                 &kp PG_UP
-                                  &kp END   &trans  &trans    &trans     &trans            &kp PG_DN
+&kp GRAVE         &kp F1  &kp F2  &kp F3    &kp F4  &kp F5    &kp F6            &kp F7            &kp F8     &kp F9  &kp F12  &kp F11
+&trans            &trans  &trans  &trans    &trans  &trans    &trans            &mkp RCLK         &trans     &trans  &trans   &trans
+&kp LEFT_SHIFT    &trans  &trans  &trans    &trans  &trans    &mkp LCLK         &mwh SCROLL_UP    &trans     &trans  &trans   &trans
+&kp LEFT_CONTROL  &trans  &trans  &trans    &trans  &trans    &trans            &msc SCROLL_DOWN  &trans     &trans  &trans   &bt BT_CLR_ALL
+                          &trans  &trans                                                          &mkp LCLK  &trans
+                                  &kp HOME  &trans  &trans                                        &kp PG_UP
+                                  &kp END   &trans  &trans    &mwh SCROLL_DOWN  &trans            &kp PG_DN
             >;
         };
 

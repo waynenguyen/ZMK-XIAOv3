@@ -23,19 +23,19 @@
 &kp SLASH  &kp Z   &kp X             &kp C              &kp V          &kp B           &kp N         &kp M     &kp COMMA  &kp DOT   &kp DOWN      &kp RIGHT
                    &kp LEFT_BRACKET  &kp RIGHT_BRACKET                                                         &mkp LCLK  &kp LEFT
                                      &kp SPACE          &kp BACKSPACE  &kp LEFT_WIN                            &kp ENTER
-                                     &mt LCTRL F10      &mt LALT F11   &lt 1 DEL       &msc MOVE_UP  &kp SEMI  &kp SQT
+                                     &kp LCTRL          &kp LALT       &lt 1 DEL       &msc MOVE_UP  &kp SEMI  &kp SQT
             >;
         };
 
         layer_1 {
             bindings = <
-&kp GRAVE         &kp F1  &kp F2  &kp F3    &kp F4  &kp F5    &kp F6          &kp F7     &kp F8     &kp F9  &kp F12  &kp F11
-&trans            &trans  &trans  &trans    &trans  &trans    &trans          &mkp RCLK  &trans     &trans  &trans   &trans
-&kp LEFT_SHIFT    &trans  &trans  &trans    &trans  &trans    &none           &none      &trans     &trans  &trans   &trans
-&kp LEFT_CONTROL  &trans  &trans  &trans    &trans  &trans    &trans          &none      &trans     &trans  &trans   &bt BT_CLR_ALL
-                          &trans  &trans                                                 &mkp LCLK  &trans
-                                  &kp HOME  &trans  &trans                               &kp PG_UP
-                                  &kp END   &trans  &trans    &msc MOVE_DOWN  &trans     &kp PG_DN
+&kp GRAVE         &kp F1  &kp F2   &kp F3    &kp F4  &kp F5    &kp F6          &kp F7     &kp F8     &kp F9  &kp F12  &kp F11
+&trans            &trans  &trans   &trans    &trans  &trans    &trans          &mkp RCLK  &trans     &trans  &trans   &trans
+&kp LEFT_SHIFT    &trans  &trans   &trans    &trans  &trans    &none           &none      &trans     &trans  &trans   &trans
+&kp LEFT_CONTROL  &trans  &trans   &trans    &trans  &trans    &trans          &none      &trans     &trans  &trans   &bt BT_CLR_ALL
+                          &kp F10  &kp F11                                                &mkp LCLK  &trans
+                                   &kp HOME  &trans  &trans                               &kp PG_UP
+                                   &kp END   &trans  &trans    &msc MOVE_DOWN  &trans     &kp PG_DN
             >;
         };
 

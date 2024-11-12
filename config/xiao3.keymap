@@ -27,7 +27,7 @@
 &mt LEFT_SHIFT HOME  &kp A   &kp S             &kp D              &kp F          &kp G        &kp H                &kp J     &kp K                &kp L     &kp UP_ARROW  &kp EQUAL
 &mt CAPSLOCK END     &kp Z   &kp X             &kp C              &kp V          &kp B        &kp N                &kp M     &kp COMMA            &kp DOT   &kp DOWN      &kp RIGHT
                              &kp LEFT_BRACKET  &kp RIGHT_BRACKET                                                             &kp LEFT_GUI         &kp LEFT
-                                               &kp SPACE          &kp BACKSPACE  &mkp LCLK                                   &kp ENTER
+                                               &kp SPACE          &kp BACKSPACE  &mkp LCLK                                   &mt RCTRL ENTER
                                                &kp LCTRL          &mkp RCLK      &lt 1 DEL    &mt RIGHT_ALT SLASH  &kp SEMI  &mt RIGHT_SHIFT SQT
             >;
         };

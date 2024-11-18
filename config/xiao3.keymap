@@ -16,6 +16,16 @@
     tapping-term-ms = <2000>;
 };
 
+&msc {
+    acceleration-exponent = <0.3>;
+    time-to-max-speed-ms = <500>;
+};
+
+&mwh {
+    time-to-max-speed-ms = <500>;
+    acceleration-exponent = <0.3>;
+};
+
 / {
     behaviors {
         hold_tap_orig: hold_tap_orig {
@@ -28,18 +38,41 @@
         };
     };
 
+    macros {
+        copy: copy {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LCTRL &kp C>;
+            label = "COPY";
+        };
+
+        paste: paste {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp RCTRL &kp V>;
+            label = "PASTE";
+        };
+
+        ctrl_click: ctrl_click {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp RCTRL &mkp LCLK>;
+            label = "CTRL_CLICK";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
         default_layer {
             bindings = <
-&kp ESC         &kp HOME  &kp END         &kp PG_UP     &kp PG_DN      &kp N5       &kp N6               &kp F10   &kp F11              &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp MINUS
-&kp TAB         &kp Q     &kp W           &kp E         &kp R          &kp T        &kp Y                &kp U     &kp I                &kp O             &kp P              &kp BACKSLASH
-&kp LEFT_SHIFT  &kp A     &kp S           &kp D         &kp F          &kp G        &kp H                &kp J     &kp K                &kp L             &kp UP_ARROW       &kp EQUAL
-&kp SCROLLLOCK  &kp Z     &kp X           &kp C         &kp V          &kp B        &kp N                &kp M     &kp COMMA            &kp DOT           &kp DOWN           &kp RIGHT
-                          &msc MOVE_DOWN  &msc MOVE_UP                                                             &kp LEFT_GUI         &kp LEFT
-                                          &kp SPACE     &kp BACKSPACE  &mkp LCLK                                   &mt RCTRL ENTER
-                                          &kp LCTRL     &lt 1 DEL      &mkp RCLK    &mt RIGHT_ALT SLASH  &kp SEMI  &mt RIGHT_SHIFT SQT
+&kp ESC         &kp HOME  &kp END         &copy         &paste         &ctrl_click    &kp N6               &kp F10   &kp F11              &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp MINUS
+&kp TAB         &kp Q     &kp W           &kp E         &kp R          &kp T          &kp Y                &kp U     &kp I                &kp O             &kp P              &kp BACKSLASH
+&kp LEFT_SHIFT  &kp A     &kp S           &kp D         &kp F          &kp G          &kp H                &kp J     &kp K                &kp L             &kp UP_ARROW       &kp EQUAL
+&kp SCROLLLOCK  &kp Z     &kp X           &kp C         &kp V          &kp B          &kp N                &kp M     &kp COMMA            &kp DOT           &kp DOWN           &kp RIGHT
+                          &msc MOVE_DOWN  &msc MOVE_UP                                                               &kp LEFT_GUI         &kp LEFT
+                                          &kp SPACE     &kp BACKSPACE  &mkp LCLK                                     &mt RCTRL ENTER
+                                          &kp LCTRL     &lt 1 DEL      &mkp RCLK      &mt RIGHT_ALT SLASH  &kp SEMI  &mt RIGHT_SHIFT SQT
             >;
         };
 

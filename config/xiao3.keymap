@@ -21,11 +21,6 @@
     time-to-max-speed-ms = <500>;
 };
 
-&mwh {
-    time-to-max-speed-ms = <500>;
-    acceleration-exponent = <0.3>;
-};
-
 / {
     behaviors {
         hold_tap_orig: hold_tap_orig {

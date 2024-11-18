@@ -16,7 +16,10 @@
     tapping-term-ms = <2000>;
 };
 
-&msc { time-to-max-speed-ms = <600>; };
+&msc {
+    time-to-max-speed-ms = <600>;
+    acceleration-exponent = <0>;
+};
 
 / {
     behaviors {

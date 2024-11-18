@@ -25,7 +25,7 @@
 };
 
 &mmv_input_listener {
-	input-processors = <&zip_xy_to_scroll_mapper 3 2>,;
+	input-processors = <&zip_xy_to_scroll_mapper>,;
 
 	layer_1 {
 		layers = <layer_1>;

@@ -17,7 +17,7 @@
 };
 
 &msc {
-    time-to-max-speed-ms = <600>;
+    time-to-max-speed-ms = <6000>;
     acceleration-exponent = <0>;
 };
 

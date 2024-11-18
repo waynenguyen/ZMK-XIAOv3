@@ -16,6 +16,8 @@
     tapping-term-ms = <2000>;
 };
 
+&msc { time-to-max-speed-ms = <600>; };
+
 / {
     behaviors {
         hold_tap_orig: hold_tap_orig {

@@ -19,7 +19,6 @@
     tapping-term-ms = <2000>;
 };
 
-
 / {
     behaviors {
         hold_tap_orig: hold_tap_orig {
@@ -115,7 +114,7 @@
 &kp SCROLLLOCK  &kp Z     &kp X         &kp C           &kp V          &kp B          &kp N                &kp M     &kp COMMA            &kp DOT           &kp DOWN           &kp RIGHT
                           &msc MOVE_UP  &msc MOVE_DOWN                                                               &kp LEFT_GUI         &kp LEFT
                                         &kp SPACE       &kp BACKSPACE  &mkp LCLK                                     &mt RCTRL ENTER
-                                        &kp LCTRL       &mo 1          &mkp RCLK      &mt RIGHT_ALT SLASH  &kp SEMI  &mt RIGHT_SHIFT SQT
+                                        &kp LCTRL       &lt 1 DEL      &mkp RCLK      &mt RIGHT_ALT SLASH  &kp SEMI  &mt RIGHT_SHIFT SQT
             >;
         };
 

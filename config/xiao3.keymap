@@ -19,15 +19,6 @@
     tapping-term-ms = <2000>;
 };
 
-&msc {
-};
-
-&mmv_input_listener {
-    layer_1 {
-        layers = <1>;
-        input-processors = <&zip_xy_to_scroll_mapper>;
-    };
-};
 
 / {
     behaviors {

@@ -49,7 +49,7 @@
         reg = <0>;
         spi-max-frequency = <2000000>;
         irq-gpios = <&gpio0 29 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>; //TB2 Mot 0.29
-        scroll-layers = <4>;
+        scroll-layers = <2>;
     };
 };
 

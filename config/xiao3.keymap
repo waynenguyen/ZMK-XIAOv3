@@ -27,13 +27,6 @@
             #binding-cells = <2>;
             tapping-term-ms = <150>;
         };
-
-        send1: send1 {
-            compatible = "zmk,behavior-send-string";
-            label = "SEND1";
-            #binding-cells = <0>;
-            text = "$";
-        };
     };
 
     macros {
@@ -125,13 +118,13 @@
 
         layer_1 {
             bindings = <
-&kp GRAVE       &kp F1        &kp F2            &kp F3            &kp F4            &kp F5        &ctrl_k_u         &kp F6         &kp F7      &kp F8      &kp F9      &kp F12
-&kp TILDE       &send1        &kp LS(NUMBER_2)  &kp LS(NUMBER_3)  &kp LS(NUMBER_4)  &kp LS(N5)    &kp LS(NUMBER_6)  &kp LS(N7)     &kp LS(N8)  &kp LS(N9)  &kp LS(N0)  &trans
-&kp LEFT_SHIFT  &kp NUMBER_1  &kp NUMBER_2      &kp NUMBER_3      &kp NUMBER_4      &kp N5        &kp NUMBER_6      &kp N7         &kp N8      &kp N9      &kp N0      &trans
-&kp BACKSPACE   &trans        &trans            &trans            &kp F10           &kp F11       &kp PG_UP         &kp PAGE_DOWN  &trans      &trans      &trans      &bt BT_CLR_ALL
-                              &kp F10           &kp F11                                                                            &mkp LCLK   &trans
-                                                &kp SPACE         &kp BACKSPACE     &trans                                         &kp ENTER
-                                                &kp END           &trans            &trans        &kp PG_UP         &kp BACKSPACE  &kp SPACE
+&kp GRAVE       &kp F1            &kp F2            &kp F3            &kp F4            &kp F5        &ctrl_k_u         &kp F6         &kp F7      &kp F8      &kp F9      &kp F12
+&kp TILDE       &kp LS(NUMBER_1)  &kp LS(NUMBER_2)  &kp LS(NUMBER_3)  &kp LS(NUMBER_4)  &kp LS(N5)    &kp LS(NUMBER_6)  &kp LS(N7)     &kp LS(N8)  &kp LS(N9)  &kp LS(N0)  &trans
+&kp LEFT_SHIFT  &kp NUMBER_1      &kp NUMBER_2      &kp NUMBER_3      &kp NUMBER_4      &kp N5        &kp NUMBER_6      &kp N7         &kp N8      &kp N9      &kp N0      &trans
+&kp BACKSPACE   &trans            &trans            &trans            &kp F10           &kp F11       &kp PG_UP         &kp PAGE_DOWN  &trans      &trans      &trans      &bt BT_CLR_ALL
+                                  &kp F10           &kp F11                                                                            &mkp LCLK   &trans
+                                                    &kp SPACE         &kp BACKSPACE     &trans                                         &kp ENTER
+                                                    &kp END           &trans            &trans        &kp PG_UP         &kp BACKSPACE  &kp SPACE
             >;
         };
 

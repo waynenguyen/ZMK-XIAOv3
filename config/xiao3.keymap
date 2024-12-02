@@ -27,6 +27,42 @@
             #binding-cells = <2>;
             tapping-term-ms = <150>;
         };
+
+        star_power: star_power {
+            compatible = "zmk,behavior-mod-morph";
+            label = "STAR_POWER";
+            bindings = <&kp ASTERISK>, <&kp CARET>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+        };
+
+        excl_and: excl_and {
+            compatible = "zmk,behavior-mod-morph";
+            label = "EXCL_AND";
+            bindings = <&kp EXCLAMATION>, <&kp AMPERSAND>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+        };
+
+        at_hash: at_hash {
+            compatible = "zmk,behavior-mod-morph";
+            label = "AT_HASH";
+            bindings = <&kp AT_SIGN>, <&kp HASH>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+        };
+
+        dollar_percent: dollar_percent {
+            compatible = "zmk,behavior-mod-morph";
+            label = "DOLLAR_PERCENT";
+            bindings = <&kp DOLLAR>, <&kp PERCENT>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+        };
     };
 
     macros {
@@ -148,13 +184,13 @@
 
         default_layer {
             bindings = <
-&kp ESC         &kp HOME  &kp END  &copy         &paste         &ctrl_x      &ctrl_k_c            &kp F10   &kp F11          &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp MINUS
-&kp TAB         &kp Q     &kp W    &kp E         &kp R          &kp T        &kp Y                &kp U     &kp I            &kp O             &kp P              &kp BACKSLASH
-&kp LEFT_SHIFT  &kp A     &kp S    &kp D         &kp F          &kp G        &kp H                &kp J     &kp K            &kp L             &kp UP_ARROW       &kp EQUAL
-&kp LCTRL       &kp Z     &kp X    &kp C         &kp V          &kp B        &kp N                &kp M     &kp COMMA        &kp DOT           &kp DOWN           &kp RIGHT
-                          &ctrl_z  &msc MOVE_UP                                                             &kp LEFT_GUI     &kp LEFT
-                                   &kp SPACE     &kp BACKSPACE  &mkp LCLK                                   &mt RCTRL ENTER
-                                   &kp LCTRL     &lt 1 DEL      &mkp RCLK    &mt RIGHT_ALT SLASH  &kp SEMI  &lt 2 SQT
+&kp ESC         &kp HOME  &kp END  &copy              &paste         &ctrl_x      &ctrl_k_c            &kp F10   &kp F11          &star_power  &excl_and     &kp MINUS
+&kp TAB         &kp Q     &kp W    &kp E              &kp R          &kp T        &kp Y                &kp U     &kp I            &kp O        &kp P         &kp BACKSLASH
+&kp LEFT_SHIFT  &kp A     &kp S    &kp D              &kp F          &kp G        &kp H                &kp J     &kp K            &kp L        &kp UP_ARROW  &kp EQUAL
+&mt LCTRL HASH  &kp Z     &kp X    &kp C              &kp V          &kp B        &kp N                &kp M     &kp COMMA        &kp DOT      &kp DOWN      &kp RIGHT
+                          &ctrl_z  &dollar_percent                                                               &kp LEFT_GUI     &kp LEFT
+                                   &kp SPACE          &kp BACKSPACE  &mkp LCLK                                   &mt RCTRL ENTER
+                                   &mt LCTRL AT_SIGN  &lt 1 DEL      &mkp RCLK    &mt RIGHT_ALT SLASH  &kp SEMI  &lt 2 SQT
             >;
         };
 

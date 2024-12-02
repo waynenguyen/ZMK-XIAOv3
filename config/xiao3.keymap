@@ -99,6 +99,48 @@
 
             label = "CTRL_K_U";
         };
+
+        ctrl_x: ctrl_x {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp RCTRL>,
+                <&macro_tap>,
+                <&kp X>,
+                <&macro_release>,
+                <&kp RCTRL>;
+
+            label = "CTRL_X";
+        };
+
+        ctrl_z: ctrl_z {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp RCTRL>,
+                <&macro_tap>,
+                <&kp Z>,
+                <&macro_release>,
+                <&kp RCTRL>;
+
+            label = "CTRL_Z";
+        };
+
+        ctrl_y: ctrl_y {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp RCTRL>,
+                <&macro_tap>,
+                <&kp Y>,
+                <&macro_release>,
+                <&kp RCTRL>;
+
+            label = "CTRL_Y";
+        };
     };
 
     keymap {
@@ -106,13 +148,13 @@
 
         default_layer {
             bindings = <
-&kp ESC         &kp HOME  &kp END         &copy         &paste         &ctrl_click    &ctrl_k_c            &kp F10   &kp F11          &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp MINUS
-&kp TAB         &kp Q     &kp W           &kp E         &kp R          &kp T          &kp Y                &kp U     &kp I            &kp O             &kp P              &kp BACKSLASH
-&kp LEFT_SHIFT  &kp A     &kp S           &kp D         &kp F          &kp G          &kp H                &kp J     &kp K            &kp L             &kp UP_ARROW       &kp EQUAL
-&kp LCTRL       &kp Z     &kp X           &kp C         &kp V          &kp B          &kp N                &kp M     &kp COMMA        &kp DOT           &kp DOWN           &kp RIGHT
-                          &msc MOVE_DOWN  &msc MOVE_UP                                                               &kp LEFT_GUI     &kp LEFT
-                                          &kp SPACE     &kp BACKSPACE  &mkp LCLK                                     &mt RCTRL ENTER
-                                          &kp LCTRL     &lt 1 DEL      &mkp RCLK      &mt RIGHT_ALT SLASH  &kp SEMI  &lt 2 SQT
+&kp ESC         &kp HOME  &kp END  &copy         &paste         &ctrl_x      &ctrl_k_c            &kp F10   &kp F11          &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp MINUS
+&kp TAB         &kp Q     &kp W    &kp E         &kp R          &kp T        &kp Y                &kp U     &kp I            &kp O             &kp P              &kp BACKSLASH
+&kp LEFT_SHIFT  &kp A     &kp S    &kp D         &kp F          &kp G        &kp H                &kp J     &kp K            &kp L             &kp UP_ARROW       &kp EQUAL
+&kp LCTRL       &kp Z     &kp X    &kp C         &kp V          &kp B        &kp N                &kp M     &kp COMMA        &kp DOT           &kp DOWN           &kp RIGHT
+                          &ctrl_z  &msc MOVE_UP                                                             &kp LEFT_GUI     &kp LEFT
+                                   &kp SPACE     &kp BACKSPACE  &mkp LCLK                                   &mt RCTRL ENTER
+                                   &kp LCTRL     &lt 1 DEL      &mkp RCLK    &mt RIGHT_ALT SLASH  &kp SEMI  &lt 2 SQT
             >;
         };
 
@@ -122,7 +164,7 @@
 &kp TILDE       &kp LS(NUMBER_1)  &kp LS(NUMBER_2)  &kp LS(NUMBER_3)  &kp LS(NUMBER_4)  &kp LS(N5)    &kp LS(NUMBER_6)  &kp LS(N7)     &kp LS(N8)  &kp LS(N9)  &kp LS(N0)  &trans
 &kp LEFT_SHIFT  &kp NUMBER_1      &kp NUMBER_2      &kp NUMBER_3      &kp NUMBER_4      &kp N5        &kp NUMBER_6      &kp N7         &kp N8      &kp N9      &kp N0      &trans
 &kp BACKSPACE   &trans            &trans            &trans            &kp F10           &kp F11       &kp PG_UP         &kp PAGE_DOWN  &trans      &trans      &trans      &bt BT_CLR_ALL
-                                  &kp F10           &kp F11                                                                            &mkp LCLK   &trans
+                                  &ctrl_y           &kp F11                                                                            &mkp LCLK   &trans
                                                     &kp SPACE         &kp BACKSPACE     &trans                                         &kp ENTER
                                                     &kp END           &trans            &trans        &kp PG_UP         &kp BACKSPACE  &kp SPACE
             >;
@@ -130,13 +172,13 @@
 
         layer_2 {
             bindings = <
-&trans  &trans  &trans        &trans        &trans        &trans          &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans        &kp NUMBER_0  &trans        &trans          &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &kp NUMBER_7  &kp N8        &kp N9        &kp N0          &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans        &trans        &trans        &trans          &trans  &trans  &trans  &trans  &trans  &trans
-                &trans        &trans                                                      &trans  &trans
-                              &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3                    &trans
-                              &kp NUMBER_4  &kp N5        &kp NUMBER_6    &trans  &trans  &trans
+&trans  &trans           &trans         &trans        &trans                &trans                   &trans  &trans        &trans        &trans        &trans  &trans
+&trans  &kp EXCLAMATION  &kp AT_SIGN    &kp HASH      &kp LEFT_BRACE        &kp RIGHT_BRACE          &trans  &kp N7        &kp N8        &kp N9        &trans  &trans
+&trans  &kp DOLLAR       &kp PERCENT    &kp LCTRL     &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS    &trans  &kp NUMBER_4  &kp N5        &kp NUMBER_6  &trans  &trans
+&trans  &trans           &kp AMPERSAND  &kp ASTERISK  &kp LEFT_BRACKET      &kp RIGHT_BRACKET        &kp N0  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans  &trans
+                         &trans         &trans                                                                             &trans        &trans
+                                        &kp N0        &kp NUMBER_1          &kp NUMBER_2                                   &trans
+                                        &kp NUMBER_3  &kp NUMBER_4          &kp N5                   &trans  &trans        &trans
             >;
         };
 

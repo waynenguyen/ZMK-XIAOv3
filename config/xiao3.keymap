@@ -7,10 +7,11 @@
 #include <dt-bindings/led/led.h>
 #include <behaviors/mouse_keys.dtsi>
 #include <zephyr/dt-bindings/input/input-event-codes.h>
+#include <dt-bindings/zmk/mouse.h>
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/mouse.h>
+#include <dt-bindings/zmk/pointing.h>
 
 &mt {
     flavor = "tap-unless-interrupted";
@@ -71,11 +72,11 @@
             #binding-cells = <0>;
             bindings =
                 <&macro_press>,
-                <&kp RCTRL>,
+                <&kp LEFT_COMMAND>,
                 <&macro_tap>,
                 <&kp C>,
                 <&macro_release>,
-                <&kp RCTRL>;
+                <&kp LEFT_COMMAND>;
 
             label = "COPY";
         };
@@ -85,11 +86,11 @@
             #binding-cells = <0>;
             bindings =
                 <&macro_press>,
-                <&kp RCTRL>,
+                <&kp LEFT_COMMAND>,
                 <&macro_tap>,
                 <&kp V>,
                 <&macro_release>,
-                <&kp RCTRL>;
+                <&kp LEFT_COMMAND>;
 
             label = "PASTE";
         };
@@ -99,11 +100,11 @@
             #binding-cells = <0>;
             bindings =
                 <&macro_press>,
-                <&kp RCTRL>,
+                <&kp LEFT_COMMAND>,
                 <&macro_tap>,
                 <&mkp LCLK>,
                 <&macro_release>,
-                <&kp RCTRL>;
+                <&kp LEFT_COMMAND>;
 
             label = "CTRL_CLICK";
         };
@@ -113,11 +114,11 @@
             #binding-cells = <0>;
             bindings =
                 <&macro_press>,
-                <&kp RCTRL>,
+                <&kp LEFT_COMMAND>,
                 <&macro_tap>,
                 <&kp K &kp C>,
                 <&macro_release>,
-                <&kp RCTRL>;
+                <&kp LEFT_COMMAND>;
 
             label = "CTRL_K_C";
         };
@@ -141,11 +142,11 @@
             #binding-cells = <0>;
             bindings =
                 <&macro_press>,
-                <&kp RCTRL>,
+                <&kp LEFT_COMMAND>,
                 <&macro_tap>,
                 <&kp X>,
                 <&macro_release>,
-                <&kp RCTRL>;
+                <&kp LEFT_COMMAND>;
 
             label = "CTRL_X";
         };
@@ -155,11 +156,11 @@
             #binding-cells = <0>;
             bindings =
                 <&macro_press>,
-                <&kp RCTRL>,
+                <&kp LEFT_COMMAND>,
                 <&macro_tap>,
                 <&kp Z>,
                 <&macro_release>,
-                <&kp RCTRL>;
+                <&kp LEFT_COMMAND>;
 
             label = "CTRL_Z";
         };
@@ -169,11 +170,11 @@
             #binding-cells = <0>;
             bindings =
                 <&macro_press>,
-                <&kp RCTRL>,
+                <&kp LEFT_COMMAND>,
                 <&macro_tap>,
                 <&kp Y>,
                 <&macro_release>,
-                <&kp RCTRL>;
+                <&kp LEFT_COMMAND>;
 
             label = "CTRL_Y";
         };
@@ -184,13 +185,13 @@
 
         default_layer {
             bindings = <
-&kp ESC         &kp HOME  &kp END  &copy              &paste         &ctrl_x      &ctrl_k_c            &kp F10          &kp F11             &star_power  &excl_and     &kp MINUS
-&kp TAB         &kp Q     &kp W    &kp E              &kp R          &kp T        &kp Y                &kp U            &kp I               &kp O        &kp P         &kp BACKSLASH
-&kp LEFT_SHIFT  &kp A     &kp S    &kp D              &kp F          &kp G        &kp H                &kp J            &kp K               &kp L        &kp UP_ARROW  &kp EQUAL
-&mt LCTRL HASH  &kp Z     &kp X    &kp C              &kp V          &kp B        &kp N                &kp M            &kp COMMA           &kp DOT      &kp DOWN      &kp RIGHT
-                          &ctrl_z  &dollar_percent                                                                      &kp LEFT_GUI        &kp LEFT
-                                   &kp SPACE          &kp BACKSPACE  &mkp LCLK                                          &mt RCTRL ENTER
-                                   &mt LCTRL AT_SIGN  &lt 1 DEL      &mkp RCLK    &mt RIGHT_ALT SLASH  &lt 1 SEMICOLON  &mt LEFT_SHIFT SQT
+&kp ESC                &kp HOME  &kp END  &copy                     &paste         &ctrl_x      &ctrl_k_c            &kp F10          &kp F11             &star_power  &excl_and     &kp MINUS
+&kp TAB                &kp Q     &kp W    &kp E                     &kp R          &kp T        &kp Y                &kp U            &kp I               &kp O        &kp P         &kp BACKSLASH
+&kp LEFT_SHIFT         &kp A     &kp S    &kp D                     &kp F          &kp G        &kp H                &kp J            &kp K               &kp L        &kp UP_ARROW  &kp EQUAL
+&mt LEFT_COMMAND HASH  &kp Z     &kp X    &kp C                     &kp V          &kp B        &kp N                &kp M            &kp COMMA           &kp DOT      &kp DOWN      &kp RIGHT
+                                 &ctrl_z  &dollar_percent                                                                             &kp LEFT_CONTROL    &kp LEFT
+                                          &kp SPACE                 &kp BACKSPACE  &mkp LCLK                                          &mt RCTRL ENTER
+                                          &mt LEFT_COMMAND AT_SIGN  &lt 1 DEL      &mkp RCLK    &mt RIGHT_ALT SLASH  &lt 1 SEMICOLON  &mt LEFT_SHIFT SQT
             >;
         };
 

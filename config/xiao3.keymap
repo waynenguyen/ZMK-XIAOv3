@@ -172,7 +172,7 @@
 &kp TILDE       &kp LS(NUMBER_1)  &kp LS(NUMBER_2)  &kp LS(NUMBER_3)  &kp LEFT_BRACE        &kp RIGHT_BRACE          &kp N7         &kp N8         &kp N9        &kp LS(N0)  &kp LS(N0)  &trans
 &kp LEFT_SHIFT  &kp NUMBER_1      &kp NUMBER_2      &kp NUMBER_3      &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS    &kp NUMBER_4   &kp N5         &kp NUMBER_6  &kp N7      &kp N0      &trans
 &kp BACKSPACE   &trans            &trans            &trans            &kp LEFT_BRACKET      &kp RIGHT_BRACKET        &kp NUMBER_1   &kp NUMBER_2   &kp NUMBER_3  &trans      &trans      &bt BT_CLR_ALL
-                                  &ctrl_y           &kp F11                                                                                        &kp N0        &trans
+                                  &ctrl_y           &bt BT_CLR_ALL                                                                                 &kp N0        &trans
                                                     &kp SPACE         &kp BACKSPACE         &trans                                                 &kp N0
                                                     &kp N0            &kp NUMBER_1          &kp NUMBER_2             &kp PG_UP      &kp BACKSPACE  &kp SPACE
             >;
